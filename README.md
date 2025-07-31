@@ -11,30 +11,60 @@ A GitHub Codespaces template pre-configured with the latest AI coding agents:
 
 This repository also includes a presentation on Vibe Coding and AI development tools.
 
-## Setup
+## Quick Start
 
+### 1. Get Your API Keys
+Before starting, you'll need API keys for the AI services you want to use:
+- **Claude Code**: Get your key from [Anthropic Console](https://console.anthropic.com/keys)
+- **OpenAI Codex**: Get your key from [OpenAI Platform](https://platform.openai.com/api-keys)
+- **Gemini CLI**: Get your key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+### 2. Launch Your Codespace
 1. Fork this repository
-2. Launch your Codespace by clicking "..." then "New with options..."
-3. Enter your anthropic api key and be sure to choose "US West" or "Southeast Asia" as the region for a fast startup.
+2. Click the green "Code" button → "Codespaces" → "Create codespace on main"
+3. Choose "US West" or "Southeast Asia" region for optimal performance
 
-You can also set your `ANTHROPIC_API_KEY` environment variable directly in GitHub Codespaces secrets:
-   - Go to [GitHub Codespaces Settings](https://github.com/settings/codespaces)
-   - Click "New secret"
-   - Name: `ANTHROPIC_API_KEY`
-   - Value: Your API key from [Anthropic Console](https://console.anthropic.com/keys)
+### 3. Set Up Your API Keys
+**Option A: During Codespace Creation**
+- When prompted, enter your API keys during the setup process
 
-## Using Claude Code
+**Option B: Using GitHub Secrets (Recommended)**
+- Go to [GitHub Codespaces Settings](https://github.com/settings/codespaces)
+- Add these secrets:
+  - `ANTHROPIC_API_KEY` - Your Claude API key
+  - `OPENAI_API_KEY` - Your OpenAI API key  
+  - `GEMINI_API_KEY` - Your Gemini API key
 
-Once your Codespace is set up with your API key, simply use Claude Code with:
-
+**Option C: Set Manually in Terminal**
 ```bash
-claude
+export ANTHROPIC_API_KEY=your-claude-key-here
+export OPENAI_API_KEY=your-openai-key-here
+export GEMINI_API_KEY=your-gemini-key-here
 ```
 
-Or with a specific question:
+## Using the AI Coding Tools
 
+Once your Codespace is set up, you can use any of the AI coding assistants:
+
+### Claude Code
 ```bash
+claude
+# or with a specific question
 claude "What does this repository do?"
+```
+
+### OpenAI Codex CLI
+```bash
+codex
+# or with a prompt
+codex "Create a Python function to sort a list"
+```
+
+### Gemini CLI
+```bash
+gemini
+# or with a query
+gemini "Explain this code"
 ```
 
 ## Presentation
