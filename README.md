@@ -37,6 +37,17 @@ Or with a specific question:
 claude "What does this repository do?"
 ```
 
+## Presentation
+
+This repository includes a presentation about Vibe Coding and AI development tools. To generate and view the slides:
+
+```bash
+pnpm install
+pnpm run slides
+```
+
+Then open `index.html` in your browser to view the presentation.
+
 ## Troubleshooting
 
 If you see a warning about missing API key when the Codespace starts:
