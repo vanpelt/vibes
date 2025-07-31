@@ -78,13 +78,25 @@ pnpm run slides
 
 Then open `index.html` in your browser to view the presentation.
 
+## Vibe Coding Tips & Tricks
+
+From the presentation, here are some pro tips for AI coding:
+
+- **Geminiception**: Call Claude or Gemini from within their own canvas/artifacts
+- **YOLO Mode**: For the brave and adventurous
+- **MCP**: Give your agents more tools - [Puppeteer](https://github.com/modelcontextprotocol/servers/tree/c19925b8f0f2815ad72b08d2368f0007c86eb8e6/src/puppeteer) is excellent for app screenshots
+- **Checkpoints**: Use `git` frequently - ask agents to commit their changes
+- **Linting & Testing**: Ask for linting and tests to give models feedback
+- **Prompt Engineering**: Create `AGENTS.md`, `GEMINI.md`, `CLAUDE.md` files for context
+- **Git Worktrees**: Run [parallel Claude Code sessions](https://docs.anthropic.com/en/docs/claude-code/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees)
+
 ## Troubleshooting
 
-If you see a warning about missing API key when the Codespace starts:
+**Missing API Keys:**
+- Follow on-screen setup instructions
+- Rebuild your Codespace after adding secrets
+- Set keys manually: `export ANTHROPIC_API_KEY=your-key-here`
 
-1. Follow the on-screen instructions to set up your API key
-2. After adding the secret, you may need to rebuild your Codespace for it to take effect
-3. Alternatively, you can set the key for your current session with:
-   ```bash
-   export ANTHROPIC_API_KEY=your-api-key-here
-   ```
+**Performance Issues:**
+- Use US West or Southeast Asia regions
+- Ensure stable internet connection
