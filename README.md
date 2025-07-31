@@ -1,6 +1,15 @@
-# Vibes
+# ✨ Vibe Coding ✨
 
-A repository with GitHub Codespaces configuration that configures [Claude Code](https://www.anthropic.com/claude-code), [OpenAI Codex CLI](https://github.com/openai/codex), or [Google Gemini CLI](https://github.com/google-gemini/gemini-cli)
+**Turn imagination into reality with AI coding tools**
+
+A GitHub Codespaces template pre-configured with the latest AI coding agents:
+- [Claude Code](https://www.anthropic.com/claude-code) - Anthropic's CLI for Claude
+- [OpenAI Codex CLI](https://github.com/openai/codex) - OpenAI's command-line interface
+- [Google Gemini CLI](https://github.com/google-gemini/gemini-cli) - Google's Gemini CLI
+
+> *"where you fully give in to the vibes, embrace exponentials, and forget that the code even exists"* - Andrej Karpathy
+
+This repository also includes a presentation on Vibe Coding and AI development tools.
 
 ## Setup
 
