@@ -45,5 +45,8 @@
         "terminal.integrated.defaultProfile.linux": "zsh"
       }
     }
+  },
+  "features": {
+    "ghcr.io/wandb/catnip/feature:1": {}
   }
 }
