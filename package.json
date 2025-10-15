@@ -10,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.8.1",
-  "dependencies": {},
   "devDependencies": {
+    "@anthropic-ai/claude-code": "^1.0.35",
+    "@google/gemini-cli": "^0.1.5",
     "@marp-team/marp-cli": "^4.2.0",
+    "@modelcontextprotocol/server-puppeteer": "^2025.5.12",
+    "@openai/codex": "^0.1.2505172129",
     "prettier": "^3.5.3"
   }
 }

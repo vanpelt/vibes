@@ -10,7 +10,7 @@
     "CODEX_ENV_GO_VERSION": "1.24.3",
     "CODEX_ENV_SWIFT_VERSION": "6.1",
     "PNPM_HOME": "/root/.local/share/pnpm",
-    "PATH": "/root/.local/share/pnpm/bin:$NVM_BIN:$PATH",
+    "PATH": "/root/.local/share/pnpm/bin:/usr/bin:/bin:${remoteEnv:PATH}",
     "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
     "OPENAI_API_KEY": "${localEnv:OPENAI_API_KEY}",
     "GEMINI_API_KEY": "${localEnv:GEMINI_API_KEY}"

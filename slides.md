@@ -4,28 +4,87 @@ theme: gaia
 backgroundColor: #1a1a1a
 color: #fff
 style: |
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   section {
     font-family: 'Roboto Mono', monospace;
     padding: 100px;
+    background: linear-gradient(-45deg, #1a1a1a, #2c3e50, #34495e, #2c3e50);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
   }
+
+  section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+  }
+
   h1, h2 {
-    color: #ffab00;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffcc;
     text-align: center;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    animation: fadeIn 1s ease-in-out;
   }
+
   h3 {
-    color: #ffab00;
+    font-family: 'Orbitron', sans-serif;
+    color: #ff66ff;
+    text-shadow: 0 0 5px #ff66ff, 0 0 10px #ff66ff;
   }
+
+  ul, p, li {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
   .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+    animation: fadeIn 2s ease-in-out;
   }
+
   .split ul {
     font-size: 0.75em;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
+
   .split h3 {
     font-size: 1em;
+  }
+
+  a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  a:hover {
+    color: #ffab00;
+    text-shadow: 0 0 5px #ffab00;
   }
 ---
 
@@ -124,15 +183,12 @@ This space is growing incredibly fast!
 
 ## Coming Up Next...
 
-### ⚡️ Lightning Talks ⚡️
 
-- **Cohere**
-- **CoreWeave**
+### ⚡️ Demos ⚡️
+### 🔥 Awards 🔥
 
 ---
 
 ## Let's get started!
 
 ### Questions?
-
-</div>

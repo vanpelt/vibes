@@ -1,40 +1,55 @@
 # Vibes
 
-A repository with GitHub Codespaces configuration that configures [Claude Code](https://www.anthropic.com/claude-code), [OpenAI Codex CLI](https://github.com/openai/codex), or [Google Gemini CLI](https://github.com/google-gemini/gemini-cli)
+A repository demonstrating what's possible with AI coding assistants using dev containers. This setup includes [Claude Code](https://www.anthropic.com/claude-code), [OpenAI Codex CLI](https://github.com/openai/codex), and [Google Gemini CLI](https://github.com/google-gemini/gemini-cli).
 
 ## Setup
 
+### Dev Container Setup
 1. Fork this repository
-2. Launch your Codespace by clicking "..." then "New with options..."
-3. Enter your anthropic api key and be sure to choose "US West" or "Southeast Asia" as the region for a fast startup.
+2. Open in your preferred dev container environment:
+   - **VS Code**: Use the "Reopen in Container" command
+   - **GitHub Codespaces**: Create a new Codespace
+   - **Local Docker**: Run `docker compose up` if you have docker-compose.yml
 
-You can also set your `ANTHROPIC_API_KEY` environment variable directly in GitHub Codespaces secrets:
-   - Go to [GitHub Codespaces Settings](https://github.com/settings/codespaces)
-   - Click "New secret"
-   - Name: `ANTHROPIC_API_KEY`
-   - Value: Your API key from [Anthropic Console](https://console.anthropic.com/keys)
+3. Set your API keys as environment variables:
+   - `ANTHROPIC_API_KEY` - Get from [Anthropic Console](https://console.anthropic.com/keys)
+   - `OPENAI_API_KEY` - Get from [OpenAI Platform](https://platform.openai.com/api-keys) 
+   - `GEMINI_API_KEY` - Get from [Google AI Studio](https://aistudio.google.com/apikey) (generous free tier!)
 
-## Using Claude Code
+## Available CLIs
 
-Once your Codespace is set up with your API key, simply use Claude Code with:
-
+### Claude Code (Anthropic)
 ```bash
 claude
-```
-
-Or with a specific question:
-
-```bash
 claude "What does this repository do?"
 ```
 
+### Codex CLI (OpenAI)
+```bash
+codex "Generate a Python function to sort a list"
+```
+
+### Gemini CLI (Google)
+```bash
+gemini "Explain this code"
+```
+*Note: Gemini CLI currently offers a generous free tier, making it great for experimentation.*
+
+## Agentic Prompting Resources
+
+- [CLAUDE.md](./CLAUDE.md) - Claude-specific prompting techniques
+- [GEMINI.md](./GEMINI.md) - Gemini prompting best practices  
+- [AGENTS.md](./AGENTS.md) - General agentic prompting strategies
+
 ## Troubleshooting
 
-If you see a warning about missing API key when the Codespace starts:
+If you encounter API key issues:
 
-1. Follow the on-screen instructions to set up your API key
-2. After adding the secret, you may need to rebuild your Codespace for it to take effect
-3. Alternatively, you can set the key for your current session with:
+1. Ensure your API keys are properly set as environment variables
+2. For dev containers, you may need to rebuild the container after adding keys
+3. Set keys for your current session:
    ```bash
    export ANTHROPIC_API_KEY=your-api-key-here
+   export OPENAI_API_KEY=your-openai-key-here
+   export GEMINI_API_KEY=your-gemini-key-here
    ```
